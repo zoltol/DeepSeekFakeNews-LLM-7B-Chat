@@ -1,11 +1,3 @@
----
-license: mit
-language:
-- zh
-- en
-base_model:
-- deepseek-ai/deepseek-llm-7b-chat
----
 # Deep **<u>Seek</u>-<u>Fake</u>-<u>News</u>** LLM
 <!-- markdownlint-disable first-line-h1 -->
 <!-- markdownlint-disable html -->
