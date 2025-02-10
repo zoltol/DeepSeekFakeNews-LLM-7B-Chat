@@ -16,7 +16,7 @@ base_model:
 </div>
 
 <p align="center">
-  <a href="https://github.com/TAN-OpenLab"><b>Project Link</b>👁️</a>
+  <a href="https://huggingface.co/zt-ai/DeepSeekFakeNews-LLM-7B-Chat"><b>Project Link (Huggingface)</b>👁️</a>
   <a href="http://faculty.neu.edu.cn/tanzhenhua/zh_CN/index/100352/list/index.htm"><b>Lab Link</b>👁️</a>
 </p>
 
