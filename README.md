@@ -70,11 +70,27 @@ Assistant:
 
 **Note:** By default (`add_special_tokens=True`), our tokenizer automatically adds a `bos_token` (`<｜begin▁of▁sentence｜>`) before the input text. Additionally, since the system prompt is not compatible with this version of our models, we DO NOT RECOMMEND including the system prompt in your input.
 
-### 4. License
+### 4. Dataset 
+The SEEK-FAKE-NEWS LLM is post-trained on the dataset MCFEND 2024. [DOWNLOAD](https://drive.google.com/drive/folders/1PkOX11062v6bN7sjSw_qNJRrXE6um61o?usp=sharing)
+
+## 5. Citation
+```
+@misc {tao_zhang_2025,
+	author       = { {Tao Zhang} },
+	title        = { DeepSeekFakeNews-LLM-7B-Chat (Revision ccc44ec) },
+	year         = 2025,
+	url          = { https://huggingface.co/zt-ai/DeepSeekFakeNews-LLM-7B-Chat },
+	doi          = { 10.57967/hf/4631 },
+	publisher    = { Hugging Face }
+}
+
+```
+
+### 6. License
 This code repository is licensed under the MIT License. The use of DeepSeekFakeNews-LLM models is subject to the Model License. DeepSeekFakeNews-LLM supports commercial use.
 
 <!-- See the [LICENSE-MODEL](https://github.com/deepseek-ai/deepseek-LLM/blob/main/LICENSE-MODEL) for more details. -->
 
-### 5. Contact
+### 7. Contact
 
 If you have any questions, please raise an issue or contact us at [zi4zhangt@gmail.com](mailto:zi4zhangt@gmail.com).
