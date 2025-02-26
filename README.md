@@ -1,4 +1,4 @@
-# Deep **<u>Seek</u>-<u>Fake</u>-<u>News</u>** LLM
+# Deep **SEEK-FAKE-NEWS** LLM
 <!-- markdownlint-disable first-line-h1 -->
 <!-- markdownlint-disable html -->
 <!-- markdownlint-disable no-duplicate-header -->
@@ -8,18 +8,20 @@
 </div>
 
 <p align="center">
-  <a href="https://huggingface.co/zt-ai/DeepSeekFakeNews-LLM-7B-Chat"><b>Project Link (Huggingface)</b>👁️</a>
-  <a href="http://faculty.neu.edu.cn/tanzhenhua/zh_CN/index/100352/list/index.htm"><b>Lab Link</b>👁️</a>
+  <a href="https://github.com/zoltol/DeepSeekFakeNews-LLM-7B-Chat"><b>Project Link</b>👁️</a>
+  <a href="http://faculty.neu.edu.cn/tanzhenhua/zh_CN/zdylm/228486/list/index.htm"><b>Lab Link</b>👁️</a>
 </p>
 
 
-### 1. Introduction of Deep **<u>Seek</u>-<u>Fake</u>-<u>News</u>** LLM
+### 1. Introduction of Deep **SEEK-FAKE-NEWS** LLM
+The explainable model Deep SEEK-FAKE-NEWS LLM was fine-tuned on the DeepSeek-LLM-7B-Chat base model, utilizing a newly constructed fake news instruction dataset built upon the MCFEND data. 
+Compared to other explainable models such as DeepSeek-LLM-7B-Chat, this explainable model not only achieves significant improvements in F1 and accuracy (Acc) metrics but also excels in reasoning analysis, providing rationales that serve as well-founded supports for its conclusions.
+This work provides an adapter for LLMs, contributing significantly to the advancement of Artificial General Intelligence (AGI). The adapter enhances the capabilities of LLMs, enabling it to perform more effectively in the specific domain of fake news detection.
 
-  
 ### 2. Model Summary
 `deepseekfakenews-llm-7b-chat` is a 7B parameter model initialized from `deepseek-llm-7b-chat` and fine-tuned on the [fake news instruction dataset](https://drive.google.com/drive/folders/1PkOX11062v6bN7sjSw_qNJRrXE6um61o?usp=sharing) that we constructed based on the [MCFEND](https://github.com/TrustworthyComp) dataset.
 
-- **Home Page:** [DeepSeekFakeNews](https://github.com/TAN-OpenLab/DeepSeekFakeNews-LLM)
+- **Github Page:** [zoltol/DeepSeekFakeNews-LLM-7B-Chat](https://github.com/zoltol/DeepSeekFakeNews-LLM-7B-Chat)
 - **Huggingface Repository:** [zt-ai/DeepSeekFakeNews-LLM-7B-Chat](https://huggingface.co/zt-ai/DeepSeekFakeNews-LLM-7B-Chat)
 - **Demo of Chatting With DeepSeekFakeNews-LLM:
 
@@ -40,7 +42,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 model.generation_config = GenerationConfig.from_pretrained(model_name)
 model.generation_config.pad_token_id = model.generation_config.eos_token_id
-lora_model = PeftModel.from_pretrained(base_model, model_name)
+model = PeftModel.from_pretrained(model, model_name)
 
 
 messages = [
@@ -70,6 +72,7 @@ Assistant:
 
 **Note:** By default (`add_special_tokens=True`), our tokenizer automatically adds a `bos_token` (`<｜begin▁of▁sentence｜>`) before the input text. Additionally, since the system prompt is not compatible with this version of our models, we DO NOT RECOMMEND including the system prompt in your input.
 
+
 ### 4. Dataset 
 The SEEK-FAKE-NEWS LLM is post-trained on the [fake news instruction dataset](https://drive.google.com/drive/folders/1PkOX11062v6bN7sjSw_qNJRrXE6um61o?usp=sharing) that we constructed based on the [MCFEND](https://github.com/TrustworthyComp) dataset.
 
@@ -78,6 +81,7 @@ The SEEK-FAKE-NEWS LLM is post-trained on the [fake news instruction dataset](ht
 |--------------------------|-------|-------|
 | DeepSeek-LLM-7B-Chat     | 64.74 | 63.58 |
 | DeepSeekFakeNews-LLM-7B-Chat | 84.17 | 84.48 |
+
 
 ## 6. Citation
 ```
@@ -92,6 +96,7 @@ The SEEK-FAKE-NEWS LLM is post-trained on the [fake news instruction dataset](ht
 
 ```
 
+
 ### 7. License
 This code repository is licensed under the MIT License. The use of DeepSeekFakeNews-LLM models is subject to the Model License. DeepSeekFakeNews-LLM supports commercial use.
 
@@ -99,4 +104,4 @@ This code repository is licensed under the MIT License. The use of DeepSeekFakeN
 
 ### 8. Contact
 
-If you have any questions, please raise an issue or contact us at [zi4zhangt@gmail.com](mailto:zi4zhangt@gmail.com).
+If you have any questions, please raise an issue or contact us at [ai4zhangt@gmail.com](mailto:ai4zhangt@gmail.com) or [zhangt1111@qq.com](mailto:zhangt1111@qq.com).
