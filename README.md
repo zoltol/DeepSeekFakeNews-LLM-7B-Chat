@@ -17,7 +17,7 @@
 
   
 ### 2. Model Summary
-`deepseekfakenews-llm-7b-chat` is a 7B parameter model initialized from `deepseek-llm-7b-chat` and fine-tuned on extra fake news instruction data.
+`deepseekfakenews-llm-7b-chat` is a 7B parameter model initialized from `deepseek-llm-7b-chat` and fine-tuned on the [fake news instruction dataset](https://drive.google.com/drive/folders/1PkOX11062v6bN7sjSw_qNJRrXE6um61o?usp=sharing) that we constructed based on the [MCFEND](https://github.com/TrustworthyComp) dataset.
 
 - **Home Page:** [DeepSeekFakeNews](https://github.com/TAN-OpenLab/DeepSeekFakeNews-LLM)
 - **Repository:** [zt-ai/DeepSeekFakeNews-LLM-7B-Chat](https://huggingface.co/zt-ai/DeepSeekFakeNews-LLM-7B-Chat)
@@ -71,9 +71,15 @@ Assistant:
 **Note:** By default (`add_special_tokens=True`), our tokenizer automatically adds a `bos_token` (`<｜begin▁of▁sentence｜>`) before the input text. Additionally, since the system prompt is not compatible with this version of our models, we DO NOT RECOMMEND including the system prompt in your input.
 
 ### 4. Dataset 
-The SEEK-FAKE-NEWS LLM is post-trained on the dataset MCFEND 2024. [DOWNLOAD](https://drive.google.com/drive/folders/1PkOX11062v6bN7sjSw_qNJRrXE6um61o?usp=sharing)
+The SEEK-FAKE-NEWS LLM is post-trained on the [fake news instruction dataset](https://drive.google.com/drive/folders/1PkOX11062v6bN7sjSw_qNJRrXE6um61o?usp=sharing) that we constructed based on the [MCFEND](https://github.com/TrustworthyComp) dataset.
 
-## 5. Citation
+### 5. Evaluation Results
+| LLMs                     | F1.   | Acc.  |
+|--------------------------|-------|-------|
+| DeepSeek-LLM-7B-Chat     | 64.74 | 63.58 |
+| DeepSeekFakeNews-LLM-7B-Chat | 84.17 | 84.48 |
+
+## 6. Citation
 ```
 @misc {tao_zhang_2025,
 	author       = { {Tao Zhang} },
@@ -86,11 +92,11 @@ The SEEK-FAKE-NEWS LLM is post-trained on the dataset MCFEND 2024. [DOWNLOAD](ht
 
 ```
 
-### 6. License
+### 7. License
 This code repository is licensed under the MIT License. The use of DeepSeekFakeNews-LLM models is subject to the Model License. DeepSeekFakeNews-LLM supports commercial use.
 
 <!-- See the [LICENSE-MODEL](https://github.com/deepseek-ai/deepseek-LLM/blob/main/LICENSE-MODEL) for more details. -->
 
-### 7. Contact
+### 8. Contact
 
 If you have any questions, please raise an issue or contact us at [zi4zhangt@gmail.com](mailto:zi4zhangt@gmail.com).
