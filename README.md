@@ -20,8 +20,8 @@
 `deepseekfakenews-llm-7b-chat` is a 7B parameter model initialized from `deepseek-llm-7b-chat` and fine-tuned on the [fake news instruction dataset](https://drive.google.com/drive/folders/1PkOX11062v6bN7sjSw_qNJRrXE6um61o?usp=sharing) that we constructed based on the [MCFEND](https://github.com/TrustworthyComp) dataset.
 
 - **Home Page:** [DeepSeekFakeNews](https://github.com/TAN-OpenLab/DeepSeekFakeNews-LLM)
-- **Repository:** [zt-ai/DeepSeekFakeNews-LLM-7B-Chat](https://huggingface.co/zt-ai/DeepSeekFakeNews-LLM-7B-Chat)
-- **Demo of Chatting With DeepSeekFakeNews-LLM: to comment soon!
+- **Huggingface Repository:** [zt-ai/DeepSeekFakeNews-LLM-7B-Chat](https://huggingface.co/zt-ai/DeepSeekFakeNews-LLM-7B-Chat)
+- **Demo of Chatting With DeepSeekFakeNews-LLM:
 
 <div align="center">
   <img src="figures/demo.PNG" width="100%" alt="Chat with DeepSeekFakeNews-LLM" />
